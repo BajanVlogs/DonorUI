@@ -42,13 +42,18 @@ class Main extends PluginBase implements Listener {
 								$command = "fly";
 								$this->getServer()->getCommandMap()->dispatch($sender, $command);
 							break;
-								
+
+							case 2:
+								$command = "nick";
+								$this->getServer()->getCommandMap()->dispatch($sender, $command);
+							break;	
 						}
 					});
 					$form->setTitle("RebirthPE DonorUI Screen");
 					$form->setContent("Please choose your command.");
 					$form->addButton(TextFormat::BOLD . "Feed");	
                                         $form->addButton(TextFormat::BOLD . "Fly");	
+                                        $form->addButton(TextFormat::BOLD . "NickName");
 					$form->sendToPlayer($sender);
 				}
 				else{
